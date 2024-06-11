@@ -1,0 +1,43 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth; /*for jumping in page*/
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@media (min-width:490px) {
+    .top {
+        background-image: url(./res/JNIC.png);
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        transition: 1s;
+    }
+}
+
+@media (max-width:490px) {
+    .top {
+        background-image: url(./res/JNIC-m.png);
+
+        /* Full height */
+        height: 100%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        transition: 1s;
+        
+    }
+}
