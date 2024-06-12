@@ -77,11 +77,12 @@ body {
 }
 
 .sd_icon {
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
     display: inline-block;
     position: relative;
     animation: 1s sd_icon infinite;
     color: #fff;
+    font-size: 30px;
 }
 
 @keyframes sd_icon {
@@ -93,7 +94,7 @@ body {
     50% {
         opacity: 1;
     }
-
+    
     100% {
         opacity: 0;
         bottom: -20px;
