@@ -2,14 +2,29 @@ body,
 html {
     height: 100%;
     margin: 0;
-    scroll-behavior: smooth; /*for jumping in page*/
+    scroll-behavior: smooth;
+    /*for jumping in page*/
+    color: #fff;
 }
 
 body::-webkit-scrollbar {
     display: none;
 }
 
+body {
+    background-color: #020614;
+}
+
+.content {
+    padding-left: 5%;
+}
+
+.content p {
+    font-size: 20px;
+}
+
 @media (min-width:490px) {
+
     .top {
         background-image: url(./res/JNIC.png);
 
@@ -22,6 +37,8 @@ body::-webkit-scrollbar {
         background-size: cover;
         color: white;
         transition: 1s;
+
+        z-index: 2;
     }
 }
 
@@ -38,6 +55,71 @@ body::-webkit-scrollbar {
         background-size: cover;
         color: white;
         transition: 1s;
-        
+
+        z-index: 2;
     }
 }
+
+/*scroll down icon*/
+
+.sd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    z-index: 1;
+    color: #fff;
+    font-size: 20px;
+    transform: translate(-50%, 0);
+}
+
+.sd_icon {
+    transform: rotate(90deg);
+    display: inline-block;
+    position: relative;
+    animation: 1s sd_icon infinite;
+    color: #fff;
+}
+
+@keyframes sd_icon {
+    0% {
+        opacity: 0;
+        bottom: -10px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        bottom: -20px;
+    }
+}
+
+
+
+
+/* Fonts */
+
+.lxgw-wenkai-tc-bold {
+    font-family: "LXGW WenKai TC", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .lxgw-wenkai-tc-regular {
+    font-family: "LXGW WenKai TC", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .lxgw-wenkai-tc-light {
+    font-family: "LXGW WenKai TC", cursive;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
