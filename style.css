@@ -49,6 +49,24 @@ a {
     font-size: 25px;
 }
 
+.button {
+    text-align: center;
+    padding: 50px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.button:hover {
+    color: cyan;
+    border: 2px solid cyan;
+}
+
+.form {
+    display: none;
+}
+
 
 @media (min-width:490px) { /* Computer */
 
