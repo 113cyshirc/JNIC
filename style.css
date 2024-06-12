@@ -107,7 +107,7 @@ table,tr,td,th {
     background-color: #f0ebf8;
 }
 
-@media (min-width:640px) {
+@media (min-width:730px) {
     .form-content {
         width: 640px;
         height: 100%;
@@ -116,9 +116,9 @@ table,tr,td,th {
         position: relative;
     }
 }
-@media (max-width:640px) {
+@media (max-width:730px) {
     .form-content {
-        width: 100%;
+        width: 85%;
         height: 100%;
         margin: 0 auto;
         padding: 0;
@@ -132,6 +132,7 @@ table,tr,td,th {
     font-size: 50px;
     font-weight: bold;
     transition: 0.3s;
+    z-index: 1;
 }
 
 .close:hover,
