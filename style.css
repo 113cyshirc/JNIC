@@ -63,14 +63,73 @@ a {
     border: 2px solid cyan;
 }
 
+@keyframes form {
+    
+}
+
 .form {
     display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.form-content {
+    width: 640px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    background-color: #f0ebf8;
+}
+
+@media (min-width:640px) {
+    .form-content {
+        width: 640px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+    }
+}
+@media (max-width:640px) {
+    .form-content {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+
 }
 
 
-@media (min-width:490px) { /* Computer */
 
-    .content p,a {
+
+@media (min-width:490px) {
+    /* Computer */
+
+    .content p,
+    a {
         font-size: 20px;
     }
 
@@ -86,14 +145,16 @@ a {
         background-size: cover;
         color: white;
         transition: 1s;
-
+        animation: top 2s ease-out;
         z-index: 2;
     }
 }
 
-@media (max-width:490px) { /* Phone */
+@media (max-width:490px) {
+    /* Phone */
 
-    .content p,a {
+    .content p,
+    a {
         font-size: 15px;
     }
 
@@ -109,8 +170,44 @@ a {
         background-size: cover;
         color: white;
         transition: 1s;
-
+        animation: top 2s ease-out;
         z-index: 2;
+    }
+}
+
+@keyframes top {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    40% {
+        opacity: 0.8;
+    }
+    45% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    65% {
+        opacity: 0.8;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.9;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    85% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -124,7 +221,7 @@ a {
     position: absolute;
     bottom: 0px;
     left: 50%;
-    z-index: 1;
+    z-index: 2;
     color: #fff;
     font-size: 20px;
     transform: translate(-50%, 0);
@@ -164,17 +261,16 @@ a {
     font-family: "LXGW WenKai TC", cursive;
     font-weight: 700;
     font-style: normal;
-  }
-  
-  .lxgw-wenkai-tc-regular {
+}
+
+.lxgw-wenkai-tc-regular {
     font-family: "LXGW WenKai TC", cursive;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  .lxgw-wenkai-tc-light {
+}
+
+.lxgw-wenkai-tc-light {
     font-family: "LXGW WenKai TC", cursive;
     font-weight: 300;
     font-style: normal;
-  }
-  
+}

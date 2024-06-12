@@ -59,7 +59,7 @@
                     <p>主辦方: 嘉義高中、嘉義女中、台南二中資訊研究社</p>
                 </div>
                 <div class="tile">
-                    <i class="far fa-address-book"></i>
+                    <i class="fas fa-dollar-sign"></i>
                     <p>費用: 600元</p>
                 </div>
             </div>
@@ -70,11 +70,20 @@
             <p>點我報名</p>
         </div>
     </div>
-    <div class="form" id="sign-up">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQ8OfPfZIqw0SYElyTtAIYufs9-mLXe1K6yHqF6pSHJ0PYZw/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+    <div class="form" id="sign-up" onclick="hide_form();">
+        <span class="arrow"><i></i></span>
+        <span class="close" onclick="hide_form();">&times;</span>
+        <div class="form-content">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeQ8OfPfZIqw0SYElyTtAIYufs9-mLXe1K6yHqF6pSHJ0PYZw/viewform?embedded=true"
+                width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"
+                id="signup-form">
+                載入中…
+            </iframe>
+        </div>
     </div>
 
 
-    </body>
+</body>
 
 </html>
