@@ -1,3 +1,4 @@
+/* Element Control */
 body,
 html {
     height: 100%;
@@ -15,15 +16,45 @@ body {
     background-color: #020614;
 }
 
+a {
+    color: cyan;
+}
+
+/* Class Control*/
+
 .content {
     padding-left: 5%;
+    padding-right: 5%;
+    transition: 1s;
 }
 
-.content p {
-    font-size: 20px;
+.plate {
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 2px solid white;
+    border-radius: 10px;
 }
 
-@media (min-width:490px) {
+.tile {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5px;
+    padding-bottom: 1%;
+}
+
+.tile i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+
+@media (min-width:490px) { /* Computer */
+
+    .content p,a {
+        font-size: 20px;
+    }
 
     .top {
         background-image: url(./res/JNIC.png);
@@ -42,7 +73,12 @@ body {
     }
 }
 
-@media (max-width:490px) {
+@media (max-width:490px) { /* Phone */
+
+    .content p,a {
+        font-size: 15px;
+    }
+
     .top {
         background-image: url(./res/JNIC-m.png);
 
@@ -94,7 +130,7 @@ body {
     50% {
         opacity: 1;
     }
-    
+
     100% {
         opacity: 0;
         bottom: -20px;
