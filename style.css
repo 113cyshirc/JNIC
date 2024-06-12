@@ -16,11 +16,32 @@ body {
     background-color: #020614;
 }
 
-a {
+a:not(.no-change) {
     color: cyan;
 }
 
+a.no-change {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a.no-change:hover {
+    color: cyan;
+}
+
+table,tr,td,th {
+    border: 2px solid white;
+    border-collapse: collapse;
+    font-size: 20px;
+    text-align: center;
+}
+
 /* Class Control*/
+
+.rest {
+    background-color: #4d4d4d;
+}
 
 .content {
     padding-left: 5%;
@@ -129,7 +150,7 @@ a {
     /* Computer */
 
     .content p,
-    a {
+    a:not(.no-change) {
         font-size: 20px;
     }
 
@@ -154,7 +175,7 @@ a {
     /* Phone */
 
     .content p,
-    a {
+    a:not(.no-change) {
         font-size: 15px;
     }
 
