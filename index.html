@@ -59,7 +59,9 @@
                 <div class="tile">
                     <i class="fas fa-school"></i>
                     <p>教室:&nbsp;</p>
-                    <p>科學大樓2F電腦教室</p>
+                    <a onclick="show_map();">
+                        <p>科學大樓2F電腦教室</p>
+                    </a>
                 </div>
                 <div class="tile">
                     <i class="fas fa-user-friends"></i>
@@ -67,16 +69,17 @@
                 </div>
                 <div class="tile">
                     <i class="fas fa-users"></i>
-                    <p>招收人數: 70人</p>
-                </div>
-                <div class="tile">
-                    <i class="far fa-address-book"></i>
-                    <p>主辦方: 嘉義高中、嘉義女中、台南二中資訊研究社</p>
+                    <p>名額: 70人</p>
                 </div>
                 <div class="tile">
                     <i class="fas fa-dollar-sign"></i>
                     <p>費用: 600元</p>
                 </div>
+                <div class="tile">
+                    <i class="far fa-address-book"></i>
+                    <p>主辦: 嘉義高中研究社</p>
+                </div>
+                
             </div>
         </div>
 
@@ -181,7 +184,13 @@
             <h1 class="lxgw-wenkai-tc-bold" id="note">注意事項</h1>
         </a>
         <div class="content lxgw-wenkai-tc-light">
-            <p>注意...待編輯</p>
+            <div class="plate">
+                <ol>
+                    <li>請欲參與者於營隊第一天攜帶費用600元並繳交給相關工作人員。</li>
+                    <li>請欲參與者先列印、詳閱、填寫<a href="">家長同意書</a>、<a href="">保險同意書</a>，並在活動第一天繳交，若無繳交則不予參與。</li>
+                    <li>當天請攜帶手機(Kahoot使用)、如自己有筆電也可攜帶 ! ! (網路請自行處理)</li>
+                </ol>
+            </div>
         </div>
 
         <a href="#signup" class="no-change">
@@ -192,7 +201,6 @@
         </div>
     </div>
     <div class="form" id="sign-up" onclick="hide_form();">
-        <span class="arrow"><i></i></span>
         <span class="close" onclick="hide_form();">&times;</span>
         <div class="form-content">
             <iframe
@@ -201,6 +209,13 @@
                 id="signup-form">
                 載入中…
             </iframe>
+        </div>
+    </div>
+
+    <div class="map" id="map" onclick="hide_map();">
+        <span class="close" onclick="hide_map();">&times;</span>
+        <div class="map-content">
+            <div class="map-display"></div>
         </div>
     </div>
 
