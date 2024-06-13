@@ -14,3 +14,11 @@ function show_map() {
 function hide_map() {
     $("#map.map").fadeOut('fast');
 }
+
+
+
+window.onclick = function(event) {
+    if (event.target == $("#map.map")[0]) {
+        $("#map.map").fadeOut('fast')
+    }
+  }
