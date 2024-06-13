@@ -1,4 +1,4 @@
-/* Element Control */
+/* Global */
 body,
 html {
     height: 100%;
@@ -16,37 +16,11 @@ body {
     background-color: #020614;
 }
 
-a:not(.no-change) {
-    color: cyan;
-}
-
-a.no-change {
-    color: white;
-    text-decoration: none;
-    transition: 0.5s;
-}
-
-a.no-change:hover {
-    color: cyan;
-}
-
-table,tr,td,th {
-    border: 2px solid white;
-    border-collapse: collapse;
-    font-size: 20px;
-    text-align: center;
-}
-
-/* Class Control*/
-
-.rest {
-    background-color: #4d4d4d;
-}
-
 .content {
     padding-left: 5%;
     padding-right: 5%;
     transition: 1s;
+    z-index: 50;
 }
 
 .plate {
@@ -54,6 +28,7 @@ table,tr,td,th {
     padding-right: 5%;
     border: 2px solid white;
     border-radius: 10px;
+    background-color: #020614;
 }
 
 .tile {
@@ -77,6 +52,7 @@ table,tr,td,th {
     border: 2px solid white;
     border-radius: 10px;
     transition: 0.5s;
+    background-color: #020614;
 }
 
 .button:hover {
@@ -84,9 +60,45 @@ table,tr,td,th {
     border: 2px solid cyan;
 }
 
-@keyframes form {
-    
+a:not(.no-change) {
+    color: cyan;
 }
+
+a.no-change {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a.no-change:hover {
+    color: cyan;
+}
+
+/* Class Table Control */
+
+table {
+    width: 100%;
+}
+
+table,
+tr,
+td,
+th {
+    border: 2px solid white;
+    border-collapse: collapse;
+    font-size: 20px;
+    text-align: center;
+}
+
+.rest {
+    background-color: #4d4d4d;
+}
+
+tr:not(.rest) {
+    background-color: #020614;
+}
+
+/* Signup Form */
 
 .form {
     display: none;
@@ -95,7 +107,7 @@ table,tr,td,th {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
+    z-index: 100;
 }
 
 .form-content {
@@ -107,32 +119,13 @@ table,tr,td,th {
     background-color: #f0ebf8;
 }
 
-@media (min-width:730px) {
-    .form-content {
-        width: 640px;
-        height: 100%;
-        margin: 0 auto;
-        padding: 0;
-        position: relative;
-    }
-}
-@media (max-width:730px) {
-    .form-content {
-        width: 85%;
-        height: 100%;
-        margin: 0 auto;
-        padding: 0;
-        position: relative;
-    }
-}
-
 .close {
     color: #aaa;
     float: right;
     font-size: 50px;
     font-weight: bold;
     transition: 0.3s;
-    z-index: 1;
+    z-index: 100;
 }
 
 .close:hover,
@@ -144,11 +137,52 @@ table,tr,td,th {
 
 }
 
+/* Screen Size Control */
 
+@media (min-width:730px) {
+    .form-content {
+        width: 640px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+    }
+}
 
+@media (max-width:730px) {
+    .form-content {
+        width: 85%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+    }
+}
 
-@media (min-width:490px) {
+@media (min-width:580px) {
     /* Computer */
+    /* Computer Background */
+    .bg {
+        background-image: url(./res/JNIC.png);
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+    
+        /* Full height */
+        height: 100%;
+        width: 100%;
+    
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        z-index: -1;
+        position: fixed;
+        top: 0;
+    
+        animation: bg 2s ease-out, flash 5s linear 2s infinite;
+        transition: 1s;
+    }
 
     .content p,
     a:not(.no-change) {
@@ -168,12 +202,34 @@ table,tr,td,th {
         color: white;
         transition: 1s;
         animation: top 2s ease-out;
-        z-index: 2;
+        z-index: 98;
     }
 }
 
-@media (max-width:490px) {
+@media (max-width:580px) {
     /* Phone */
+    /* Phone Background */
+    .bg {
+        background-image: url(./res/JNIC-m2.png);
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+    
+        /* Full height */
+        height: 100%;
+        width: 100%;
+    
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        z-index: -1;
+        position: fixed;
+        top: 0;
+    
+        animation: bg 2s ease-out, flash 5s linear 2s infinite;
+        transition: 1s;
+    }
 
     .content p,
     a:not(.no-change) {
@@ -181,7 +237,7 @@ table,tr,td,th {
     }
 
     .top {
-        background-image: url(./res/JNIC-m.png);
+        background-image: url(./res/JNIC-m2.png);
 
         /* Full height */
         height: 100%;
@@ -193,47 +249,13 @@ table,tr,td,th {
         color: white;
         transition: 1s;
         animation: top 2s ease-out;
-        z-index: 2;
+        z-index: 98;
     }
 }
 
-@keyframes top {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 0.5;
-    }
-    40% {
-        opacity: 0.8;
-    }
-    45% {
-        opacity: 0.4;
-    }
-    50% {
-        opacity: 0.8;
-    }
-    65% {
-        opacity: 0.8;
-    }
-    70% {
-        opacity: 0.5;
-    }
-    75% {
-        opacity: 0.9;
-    }
-    80% {
-        opacity: 0.5;
-    }
-    85% {
-        opacity: 0.9;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
-/*scroll down icon*/
+
+/* Scroll Down Icon */
 
 .sd {
     display: flex;
@@ -243,7 +265,7 @@ table,tr,td,th {
     position: absolute;
     bottom: 0px;
     left: 50%;
-    z-index: 2;
+    z-index: 99;
     color: #fff;
     font-size: 20px;
     transform: translate(-50%, 0);
@@ -258,21 +280,7 @@ table,tr,td,th {
     font-size: 30px;
 }
 
-@keyframes sd_icon {
-    0% {
-        opacity: 0;
-        bottom: -10px;
-    }
 
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        bottom: -20px;
-    }
-}
 
 
 
@@ -295,4 +303,102 @@ table,tr,td,th {
     font-family: "LXGW WenKai TC", cursive;
     font-weight: 300;
     font-style: normal;
+}
+
+/* Animation Control */
+
+@keyframes sd_icon {
+
+    /* Scroll Down */
+    0% {
+        opacity: 0;
+        bottom: -10px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        bottom: -20px;
+    }
+}
+
+@keyframes top {
+
+    /* On Cover Loaded */
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    40% {
+        opacity: 0.8;
+    }
+
+    45% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    65% {
+        opacity: 0.8;
+    }
+
+    70% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.9;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    85% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bg {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash {
+
+    /* Constant Flashing */
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
