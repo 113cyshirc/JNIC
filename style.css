@@ -116,6 +116,10 @@ a.no-change:hover {
     color: cyan;
 }
 
+.warning {
+    color: red;
+}
+
 /* Class Table Control */
 
 table {
