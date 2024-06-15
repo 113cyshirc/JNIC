@@ -73,25 +73,25 @@ $(document).ready(function () {
     $(".s_button").click(function() {
         $(".selected").attr("class","s_button");
         $(this).attr("class","s_button selected");
-        $(".show").slideUp(function() {
+        $(".show").slideUp(500,function() {
             $(this).attr("class","plate show");
         });
         var id = $(this).attr("id");
         switch(id){
             case "bus_r":
-                $("#bus_r_plate").slideDown(function() {
+                $("#bus_r_plate").slideDown(500,function() {
                     $(this).attr("class","plate show");
                     window.location.replace("#select_route");
                 });
                 break;
             case "train_n":
-                $("#train_n_plate").slideDown(function() {
+                $("#train_n_plate").slideDown(500,function() {
                     $(this).attr("class","plate show");
                     window.location.replace("#select_route");
                 });
                 break;
             case "train_s":
-                $("#train_s_plate").slideDown(function() {
+                $("#train_s_plate").slideDown(500,function() {
                     $(this).attr("class","plate show");
                     window.location.replace("#select_route");
                 });
