@@ -61,6 +61,11 @@ body {
     background-color: #020614;
 }
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .content {
     padding-left: 5%;
     padding-right: 5%;
@@ -83,16 +88,29 @@ body {
     align-items: center;
     padding-left: 5px;
     padding-bottom: 1%;
+    gap: 5px;
 }
 
-.tile i {
+.tile,
+.row i {
     margin-right: 10px;
     font-size: 25px;
 }
 
-.button {
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5px;
+    padding-bottom: 1%;
+    gap: 5px;
+
+}
+
+.s_button {
     text-align: center;
-    padding: 50px;
+    padding: 10px;
     color: white;
     border: 2px solid white;
     border-radius: 10px;
@@ -100,7 +118,20 @@ body {
     background-color: #020614;
 }
 
-.button:hover {
+.button {
+    text-align: center;
+    padding: 25px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: 0.5s;
+    background-color: #020614;
+}
+
+
+.button:hover,
+.s_button:hover,
+.selected {
     color: cyan;
     border: 2px solid cyan;
 }
@@ -214,7 +245,7 @@ tr:not(.rest) {
 .map-display {
     background-image: url(./res/flat-map.png);
     margin: auto;
-    transform: translate(0,2%);
+    transform: translate(0, 2%);
     width: 95%;
     height: 95%;
     background-position: center;
@@ -222,6 +253,22 @@ tr:not(.rest) {
     background-size: contain;
 }
 
+/* Route Control */
+
+.station {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hide {
+    display: none;
+}
+
+.arrtime {
+    font-size: 15px;
+    margin: auto;
+}
 
 /* Screen Size Control */
 
@@ -271,7 +318,7 @@ tr:not(.rest) {
         transition: 1s;
     }
 
-    .content p,
+    .content p:not(.arrtime),
     /* Note Control */
     ol,
     li,
@@ -322,7 +369,7 @@ tr:not(.rest) {
         transition: 1s;
     }
 
-    .content p,
+    .content p:not(.arrtime),
     /* Note Control */
     ol,
     li,
