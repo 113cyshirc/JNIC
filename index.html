@@ -186,7 +186,13 @@
                     <p>主辦:</p>
                     <p>嘉義高中資訊研究社</p>
                 </div>
-
+                <div class="tile">
+                    <i class="fa-regular fa-file"></i>
+                    <p>附件:&nbsp;</p>
+                    <a href="#links">
+                        <p>點我到連結區</p>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -411,12 +417,19 @@
                 <p>點擊圖片前往Google Maps</p>
                 <a href="https://www.google.com/maps/dir/%E5%98%89%E7%BE%A9%E5%B8%82%E8%A5%BF%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF%E5%98%89%E7%BE%A9%E7%81%AB%E8%BB%8A%E7%AB%99(%E5%89%8D%E7%AB%99)/600%E5%98%89%E7%BE%A9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%A4%A7%E9%9B%85%E8%B7%AF%E4%BA%8C%E6%AE%B5738%E8%99%9F%E5%9C%8B%E7%AB%8B%E5%98%89%E7%BE%A9%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8/@23.4789607,120.4440897,15z/data=!4m18!4m17!1m5!1m1!1s0x346e9428d3fa07fb:0x4d8daa7e36150067!2m2!1d120.441209!2d23.479075!1m5!1m1!1s0x346e944c0178f11f:0x19d0c519b070dba1!2m2!1d120.4645097!2d23.4782731!2m3!6e1!7e2!8j1723279500!3e3?entry=ttu"
                     target="_blank">
-                    <img src="./res/route.png" alt="route">
+                    <div class="row">
+                        <img class="image" src="./res/trans/8_10公車時間表.png" alt="route810">
+                        <img class="image" src="./res/trans/8_11公車時間表.png" alt="route811">
+                    </div>
                 </a>
             </div>
             <div class="plate hide" id="train_s_plate">
                 <p>臺鐵371次自強3000列車</p>
                 <div class="row">
+                    <img class="image" src="./res/trans/南下台鐵班次.png" alt="s_train">
+                    <img class="image" src="./res/trans/火車站集合地點.png" alt="stay">
+                </div>
+                <!-- <div class="row">
                     <div class="station">
                         <p>台中</p>
                         <p class="arrtime">7:00
@@ -452,7 +465,8 @@
                         <p class="arrtime">8:08
                         <p>
                     </div>
-                </div>
+                </div> -->
+                <br>
                 <a href="https://www.railway.gov.tw/tra-tip-web/tip/tip001/tip123/query"
                     target="_blank">前往訂票(7/13開始)</a>
                 <p></p>
@@ -460,6 +474,10 @@
             <div class="plate hide" id="train_n_plate">
                 <p>臺鐵112次自強列車</p>
                 <div class="row">
+                    <img class="image" src="./res/trans/北上台鐵班次.png" alt="n_train">
+                    <img class="image" src="./res/trans/火車站集合地點.png" alt="stay">
+                </div>
+                <!-- <div class="row">
                     <div class="station">
                         <p>潮州</p>
                         <p class="arrtime">6:00
@@ -519,7 +537,8 @@
                         <p class="arrtime">8:12
                         <p>
                     </div>
-                </div>
+                </div> -->
+                <br>
                 <a href="https://www.railway.gov.tw/tra-tip-web/tip/tip001/tip123/query"
                     target="_blank">前往訂票(7/13開始)</a>
                 <p></p>
@@ -529,17 +548,47 @@
         <a href="#signup" class="no-change">
             <h1 class="lxgw-wenkai-tc-bold" id="signup">報名</h1>
         </a>
-        <p>報名已截止</p>
+        <div class="content content lxgw-wenkai-tc-light">
+            <p>報名已截止</p>
+        </div>
         <!-- <div class="button lxgw-wenkai-tc-light" id="sign-up" onclick="show_form();">
             <p>點我報名<span class="warning">&nbsp;(最後一天)</span></p> 
         </div>
         <br> -->
-        <a class="no-change" href="https://drive.google.com/file/d/1xT7VomrjoA6q_zqEntdy6hRHpkLvRd6d/view"
-            target="_blank">
-            <div class="button lxgw-wenkai-tc-light" id="download">
-                <p>下載家長同意書</p> <!---->
-            </div>
+        <a href="#links" class="no-change">
+            <h1 class="lxgw-wenkai-tc-bold" id="links">連結</h1>
         </a>
+        <div class="content lxgw-wenkai-tc-light">
+            <a class="no-change" href="https://www.surveycake.com/s/64dor" target="_blank">
+                <div class="button lxgw-wenkai-tc-light" id="payment">
+                    <p>匯款方式調查問卷</p> <!---->
+                </div>
+            </a>
+            <br>
+            <a class="no-change" href="https://discord.com/invite/NDqJf6PmB4" target="_blank">
+                <div class="button lxgw-wenkai-tc-light" id="discord">
+                    <p>Discord伺服器</p> <!---->
+                </div>
+            </a>
+            <br>
+            <a class="no-change" href="https://drive.google.com/file/d/1xT7VomrjoA6q_zqEntdy6hRHpkLvRd6d/view" target="_blank">
+                <div class="button lxgw-wenkai-tc-light" id="download">
+                    <p>下載家長同意書</p> <!---->
+                </div>
+            </a>
+            <br>
+            <a class="no-change" href="https://drive.google.com/drive/u/1/folders/18vHcMIRY7e75GbZU3Zh2XvHarolpao-t" target="_blank">
+                <div class="button lxgw-wenkai-tc-light" id="timefile">
+                    <p>接送時間表原始檔案</p> <!---->
+                </div>
+            </a>
+            <br>
+            <a class="no-change" href="https://drive.google.com/file/d/1c__nOobd_QbLcfx5fQyQPX59-DCpA7Av/view" target="_blank">
+                <div class="button lxgw-wenkai-tc-light" id="schoolmap">
+                    <p>校園路線圖原始檔案</p> <!---->
+                </div>
+            </a>
+        </div>
     </div>
     <div class="form" id="sign-up">
         <span class="close" onclick="hide_form();">&times;</span>

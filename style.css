@@ -341,6 +341,10 @@ tr:not(.rest) {
         animation: top 2s ease-out;
         z-index: 98;
     }
+
+    .image {
+        width: 49%;
+    }
 }
 
 @media (max-width:580px) {
@@ -392,6 +396,10 @@ tr:not(.rest) {
         animation: top 2s ease-out;
         z-index: 98;
     }
+
+    .image {
+        width: 99%;
+    }
 }
 
 
@@ -421,7 +429,14 @@ tr:not(.rest) {
     font-size: 30px;
 }
 
+/* No select */
 
+#select_route {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    cursor: pointer;
+}
 
 
 
